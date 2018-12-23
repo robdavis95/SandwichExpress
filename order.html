@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+	<link rel=StyleSheet href="css/order-style.css" TYPE="text/css">
+
+	<!--Google Fonts Import --> 
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css'>
+	
+	<!--JQuery link-->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<!--Javascript files-->
+	<script type="text/javascript" src="js/order.js"></script>
+
+	<title>Sandwich Express | Lincoln</title>
+
+</head>
+<body>
+
+<!-- Navigation Bar --> 
+	<div id="NavBar">
+		<nav>
+			<!--Sandwich Express lgoo -->
+			<span id="logo"><a href="index.html">Sandwich Express</a></span>
+
+			<a href="#" id="menu-icon"></a>
+
+			<!--Hyperlinks -->
+			<ul>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="offers.html">Offers</a></li>
+				<li><a href="findus.html">Find Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li id="order"><a href="#">Order</a></li>
+			</ul>
+
+		</nav>
+	</div>
+<!-- End of navigation Bar --> 
+
+<!--Content inside the page wrap -->
+	<div id="wrap">
+	<!-- Main content goes here -->
+		<div id="contentBox">
+		<!--Start of page content-->
+
+			<div id="button-container">
+				<input type="button" id="order-button" name="" value="Order">
+				<input type="button" id="delivery-button" name="" value="Delivery">
+				<input type="button" id="payment-button" name="" value="Payment">
+			</div>
+
+			<div id="order-line">
+			</div>
+
+			<section id="order-section">
+
+				<h1>Order</h1>
+
+				<form id="order-form">
+
+					<div class="outline-box" id="bread"> <!--Bread Options-->
+						<label>Choose a bread:</label>
+
+						<select name="bread" id="bread-select" class="stored">
+							<option>Italian</option>
+							<option>Wholemeal</option>
+							<option>Cheese and Herb</option>
+							<option>Flatbread</option>
+							<option>Honey Oat</option>
+						</select>
+					</div>
+
+					<div class="outline-box" id="filling"> <!--Filling Options-->
+						<label>Choose a filling:</label>
+						<br/>
+						<br/>
+						<br/>
+					    <input type="radio" name="filling" class="stored" value="Cheddar and Pickle"> Cheddar and Pickle<br>
+					    <input type="radio" name="filling" class="stored" value="Smoked Ham and Cheddar"> Smoked Ham and Cheddar<br>
+					    <input type="radio" name="filling" class="stored" value="Cheddar and Onion"> Cheddar and Onion<br>
+					    <input type="radio" name="filling" class="stored" value="Tuna Sweetcorn"> Tuna Sweetcorn<br>
+					    <input type="radio" name="filling" class="stored" value="Italian B.M.T."> Italian B.M.T.<br>
+					    <input type="radio" name="filling" class="stored" value=" Coronation Chicken"> Coronation Chicken<br>
+					</div>
+
+					<div class="outline-box" id="quantity">
+
+					    <label>Quantity:</label>
+
+						<select name="quantity" id="quantity-select" class="stored">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+				  			<option>5</option>
+				  			<option>6</option>
+				  			<option>7</option>
+				  			<option>8</option>
+				  			<option>9</option>
+				  			<option>10</option>
+				  			<option>11</option>
+				  			<option>12</option>
+				  			<option>13</option>
+				  			<option>14</option>
+				  			<option>15</option>
+				  			<option>16</option>
+				  			<option>17</option>
+				  			<option>18</option>
+				  			<option>19</option>
+				  			<option>20</option>
+				  			<option>21</option>
+				  			<option>22</option>
+				  			<option>23</option>
+				  			<option>24</option>
+				  			<option>25</option>
+						</select>
+					</div>
+					  
+					<input type="button" onclick="" id="submit" name="" value="Add to Order +">
+					<br/>
+					<br/>
+					<br/>
+
+				</form>
+
+				<form>
+					<div class="outline-box" id="drinks">
+						<h2>Drinks:</h2> <!--Drinks Checkbox-->
+							<select name="drink" id="drink-select" class="stored">
+								<option>Sprite</option>
+								<option>Fanta</option>
+								<option>Coca-Cola</option>
+								<option>Pepsi</option>
+							</select>
+					</div>
+
+					<input type="button" id="drink-submit" onclick="" name="" value="+">
+				</form>
+
+				<form>
+					<div class="outline-box" id="extras">
+						<h2>Extras:</h2> <!--Extras Checkbox-->
+							<select name="extra" id="extra-select" class="stored">
+								<option>Garlic Bread</option>
+								<option>Cheesy nachos with dips</option>
+								<option>Doughballs</option>
+							</select>
+					</div>
+
+					<input type="button" id="extras-submit" onclick="" name="" value="+">
+				</form>
+
+
+			</section> <!--End the order section of the page-->
+
+			<section id="delivery-section">
+
+				<h1>Delivery</h1>
+
+				<form id="delivery-form">
+
+					<div class="outline-box">
+						<h2>Delivery Address:</h2>
+						<input type="text" id="address-line-1" 	class="stored"  autocomplete="off" name="address-line-1" 	placeholder="Address Line 1" value=""><br><br>
+						<input type="text" id="address-line-2" 	class="stored"  autocomplete="off" name="address-line-2" 	placeholder="Address Line 2" value=""><br><br>
+						<input type="text" id="town-city" 		class="stored"  autocomplete="off" name="town-city" 		placeholder="Town/City" value=""><br><br>
+						<input type="text" id="county" 			class="stored"  autocomplete="off" name="county" 			placeholder="County" value=""><br><br>
+						<input type="text" id="postcode" 		class="stored"  autocomplete="off" name="postcode" 			placeholder="Postcode" value=""><br><br>
+					</div>
+
+					<div class="outline-box">
+						<label for="day">Date of delivery:</label>
+						<select name="day" id="day" class="stored">
+							<option>day</option>
+							<option>01</option>
+							<option>02</option>
+							<option>03</option>
+							<option>04</option>
+				  			<option>05</option>
+				  			<option>06</option>
+				  			<option>07</option>
+				  			<option>08</option>
+				  			<option>09</option>
+				  			<option>10</option>
+				  			<option>11</option>
+				  			<option>12</option>
+				  			<option>13</option>
+				  			<option>14</option>
+				  			<option>15</option>
+				  			<option>16</option>
+				  			<option>17</option>
+				  			<option>18</option>
+				  			<option>19</option>
+				  			<option>20</option>
+				  			<option>21</option>
+				  			<option>22</option>
+				  			<option>23</option>
+				  			<option>24</option>
+				  			<option>25</option>
+				  			<option>26</option>
+				  			<option>27</option>
+				  			<option>28</option>
+				  			<option>29</option>
+				  			<option>30</option>
+				  			<option>31</option>
+						</select>
+
+						<select name="month" id="month" class="stored">
+							<option>month</option>
+							<option>January</option>
+							<option>February</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+				  			<option>September</option>
+				  			<option>October</option>
+				  			<option>November</option>
+				  			<option>December</option>
+						</select>
+
+						<select name="year" id="year" class="stored">
+							<option>year</option>
+							<option>2015</option>
+							<option>2016</option>
+						</select>
+						
+					</div>
+
+					<div class="outline-box">
+						<h2>Offer Code</h2>
+
+						<input type="text" class="stored" id="offer-code" name="offer-code" placeholder="Insert Offer Code" value=""><br>
+
+					</div>
+
+					<input type="button" onclick="alert('Saved! Continue to payment.')" id="submit-address" value="Save">
+					
+				</form>
+
+			</section> <!--End Delivery Section-->
+
+			<!--Start Payment Section-->
+			<section id="payment-section">
+
+				<h1>Payment</h1>
+
+					<div class="outline-box">
+					
+						<div id="order-confirmation">
+								<article>
+									<h2>Order Confirmation</h2><br>
+
+								
+									<br/>   
+									<div>==================================================</div>
+									Delivery Address: <br/>
+											 <div id="address-line-1-output"></div>		
+											 <div id="address-line-2-output"></div>		
+											 <div id="town-city-output"></div>			
+											 <div id="postcode-output"></div>			
+									Date of Delivery: <div id="day-output"></div>
+													  <div id="month-output"></div>
+													  <div id="year-output"></div>
+									<div>==================================================</div>
+
+									Offer Code: <div id="offer-code-output"></div>
+
+								</article>
+
+								<a href="http://www.paypal.com" target="_blank"><h3>Continue to PayPal ></h3></a>
+
+								<p>Thank you for shopping with Sandwich Express!</p>
+							
+						</div>
+					</div>
+
+
+			</section><!--End Payment Section-->
+			
+		</div> <!--End Content Box-->
+	</div> <!--End Wrap--> 
+
+
+	<div id="order-box">
+		<h3>Your Order</h3>
+
+		<div id="order-box-section">
+			<div id="result">
+				<div class="results" style="display:none;">
+				   <div class="resultHeader"></div>
+				   <div id="quantity-output" class="results"></div>x
+				   <div id="filling-output" class="results"></div>sandwiches with
+				   <div id="bread-output" class="results"></div>bread
+				   <br/>   
+				   <div id="divider">=================================</div> 
+				   <br/>
+				</div>
+				   <div id="drink-output">
+				   </div>
+				   <div id="extras-output">
+				   </div>
+
+					<input type="button" id="clear-order" name="" value="Clear Order">
+
+				
+			</div>
+		</div>
+	</div>	
+
+<!--Page footer & copyright information --> 
+<footer>
+	<div id="footerWrap">
+		<a href="http://www.instagram.com" title="Instagram"  target="_blank"> <div id="instagram">   </div>  </a>
+		<a href="http://www.twitter.com"   title="Twitter"    target="_blank">   <div id="twitter">   </div>  </a>
+		<a href="http://www.facebook.com"  title="Facebook"   target="_blank">  <div id="facebook">   </div>  </a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

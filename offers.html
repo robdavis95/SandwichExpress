@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+	<link rel=StyleSheet href="css/offers-style.css" TYPE="text/css">
+
+	<!--Google Fonts Import --> 
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css'>
+	
+	<!--JQuery link-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/offers.js"></script> 
+
+	<title>Sandwich Express | Lincoln</title>
+
+</head>
+<body>
+
+<!-- Navigation Bar --> 
+	<div id="NavBar">
+
+		<nav>
+			<!--Sandwich Express lgoo -->
+			<span id="logo"><a href="index.html">Sandwich Express</a></span>
+
+			<a href="#" id="menu-icon"></a>
+
+			<!--Hyperlinks -->
+			<ul>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="#">Offers</a></li>
+				<li><a href="findus.html">Find Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li id="order"><a href="order.html">Order</a></li>
+			</ul>
+
+		</nav>
+
+	</div>
+<!-- End of navigation Bar --> 
+
+<!--Header containing Title and background picture--> 
+	<header>
+		<h1>Offers</h1> 
+	</header>
+
+<!--Content inside the page wrap -->
+	<div id="wrap">
+	<!-- Main content goes here -->
+		<div id="contentBox">
+
+			<!--Start of page content-->
+			<p>
+			Take a look at out wide range of offers and deals! </br><br>Click to reveal the offer codes. 
+			</p>
+
+			<div class="offer">
+				<h2>20% off all orders over £500</h2>
+			</div>
+			<div class="content">
+				Offer Code: 6iFkM9ur
+		    </div>
+		
+			<div class="offer">
+				<h2>Free appetiser with every Main meal</h2>
+			</div>
+			<div class="content">
+		        Offer Code: FzIX2Bph
+		    </div>
+
+			<div class="offer">
+				<h2>Free delivery with orders over £300</h2>
+			</div>
+			<div class="content">
+		        Offer Code: 8cCphVWm
+		    </div>
+			
+			<p>There are no other to display offers at this present moment</p>
+
+			<script type="text/javascript">
+				jQuery(document).ready(function() {
+				  jQuery(".content").hide();
+				  //toggle the componenet with class content
+				  jQuery(".offer").click(function()
+				  {
+				    jQuery(this).next(".content").slideToggle(200);
+				  });
+				});
+			</script>
+			
+			
+		</div>
+	</div>
+
+
+
+<!--Page footer & copyright information --> 
+<footer>
+	<div id="footerWrap">
+		<a href="http://www.instagram.com" title="Instagram"  target="_blank"> <div id="instagram">   </div>  </a>
+		<a href="http://www.twitter.com"   title="Twitter"    target="_blank">   <div id="twitter">   </div>  </a>
+		<a href="http://www.facebook.com"  title="Facebook"   target="_blank">  <div id="facebook">   </div>  </a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

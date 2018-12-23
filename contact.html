@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+	<link rel=StyleSheet href="css/contact-style.css" TYPE="text/css">
+
+	<!--Google Fonts Import --> 
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css'>
+	
+	<!--JQuery link-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/message.js"></script>
+
+	<title>Sandwich Express | Lincoln</title>
+
+</head>
+<body>
+
+<!-- Navigation Bar --> 
+	<div id="NavBar">
+
+		<nav>
+			<!--Sandwich Express lgoo -->
+			<span id="logo"><a href="index.html">Sandwich Express</a></span>
+
+			<a href="#" id="menu-icon"></a>
+
+			<!--Hyperlinks -->
+			<ul>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="offers.html">Offers</a></li>
+				<li><a href="findus.html">Find Us</a></li>
+				<li><a href="#">Contact</a></li>
+				<li id="order"><a href="order.html">Order</a></li>
+			</ul>
+
+		</nav>
+
+	</div>
+<!-- End of navigation Bar --> 
+
+<!--Header containing Title and background picture--> 
+	<header>
+		<h1>Contact</h1> 
+	</header>
+
+<!--Content inside the page wrap -->
+	<div id="wrap">
+	<!-- Main content goes here -->
+		<div id="contentBox">
+
+			<!--Start of page content-->
+			<p>
+			If you have any enquiries about ordering with Sandwich Express and you would like to contact us please either call, send a letter to us or send us an email using the contact form below.<br><br>
+
+			At Sandwich Express we reply to all enquiries within 1 working day.
+			</p>
+
+			<p id="address">
+			Sandwich Express <br>
+			19 Brayford Pool <br>
+			Lincoln <br>
+			LN6 7TS <br>
+			</p>
+
+			<p id="phone">
+			01522 882000
+			</p>
+
+
+			<div id="contact-box">
+		
+
+					<form>
+						<input type="text" class="stored" name="name"    id="name"    placeholder="Name" required>
+						<input type="text" class="stored" name="email"   id="email"   placeholder="Email Address" required>
+						<input type="text" class="stored" name="message" id="message" placeholder="Message" required>
+
+						<input type="button" onclick="alert('Message Sent!')" id="submit" name="" value="Submit">
+					</form>
+				
+
+			</div>
+
+			<div id="result-box-container">
+
+				<div id="result-box" class="results" style="display:none;">
+				   <h2>Message Details</h2><br/><br/>
+				   <h2>Name:</h2>
+				   <div id="name-output" class="results"></div><br/><br/>
+
+				   <h2>Email:</h2>
+				   <div id="email-output" class="results"></div><br/><br/>
+ 
+				   <h2>Message:</h2>
+				   <div id="message-output" class="results"></div><br/>
+				</div>
+			</div>
+
+			<script> //On button press fade out form, fade in form results
+				$('.stored').blur(function () {
+					sessionStorage[$(this).attr('name')] = $(this).val();
+				});
+
+				$('#submit').click(function() { 
+					//$('#order-form').fadeOut("fast");
+					$('#contact-box').fadeOut("slow"); 
+					$('#result-box').fadeIn("slow");
+					$('#name-output').html(sessionStorage["name"]);
+ 					$('#email-output').html(sessionStorage["email"]);
+					$('#message-output').html(sessionStorage["message"]);
+
+ 					function init() {
+				        if (sessionStorage["name"]) {
+				            $('#name').val(sessionStorage["name"]);
+				        }
+				        if (sessionStorage["email"]) {
+				            $('#email').val(sessionStorage["email"]);
+				        }  
+				 		if (sessionStorage["message"]) {
+				            $('#message').val(sessionStorage["message"]);
+				        }
+					}
+
+				
+				});
+			</script>
+
+			
+
+
+
+		</div>
+	</div>
+
+<div id="message-sent">
+				</div>
+
+
+<!--Page footer & copyright information --> 
+<footer>
+	<div id="footerWrap">
+		<a href="http://www.instagram.com" title="Instagram"  target="_blank"> <div id="instagram">   </div>  </a>
+		<a href="http://www.twitter.com"   title="Twitter"    target="_blank">   <div id="twitter">   </div>  </a>
+		<a href="http://www.facebook.com"  title="Facebook"   target="_blank">  <div id="facebook">   </div>  </a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
